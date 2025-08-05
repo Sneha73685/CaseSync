@@ -1,2 +1,1 @@
-# CaseSync
-Leap Hackathon
+# Case-Sync

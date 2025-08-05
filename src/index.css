@@ -1,0 +1,130 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 215 70% 28%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 42 91% 60%;
+    --accent-foreground: 220 60% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 215 70% 28%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 215 80% 20%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 70% 35%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 70% 35%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 215 70% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 42 91% 60%;
+    --accent-foreground: 220 60% 10%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 213 27% 84%;
+    
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 215 70% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .casesync-card {
+    @apply bg-card rounded-lg border border-border shadow-sm transition-all hover:shadow-md;
+  }
+  
+  .casesync-card-hover {
+    @apply hover:border-primary/20 hover:bg-card/80;
+  }
+  
+  .casesync-icon-btn {
+    @apply rounded-full p-2 hover:bg-primary/10 transition-colors;
+  }
+  
+  .casesync-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium;
+  }
+  
+  .casesync-loader {
+    @apply animate-pulse-subtle;
+  }
+  
+  .casesync-fade-in {
+    @apply animate-fade-in;
+  }
+
+  .language-selector {
+    @apply relative text-sm font-medium;
+  }
+  
+  .language-option {
+    @apply cursor-pointer px-4 py-2 hover:bg-muted transition-colors;
+  }
+}
