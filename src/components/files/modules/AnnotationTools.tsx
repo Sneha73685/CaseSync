@@ -319,7 +319,7 @@ const AnnotationTools = ({ selectedFiles, onAction }: AnnotationToolsProps) => {
               className="h-20 flex flex-col gap-2"
               onClick={() => onAction('Smart Annotation', 'Template overlay')}
             >
-              <Highlight className="h-6 w-6" />
+              <Highlighter className="h-6 w-6" />
               <span>Template Overlay</span>
               <span className="text-xs text-muted-foreground">Standard markers</span>
             </Button>

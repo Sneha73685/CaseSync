@@ -33,7 +33,7 @@ import { useToast } from '@/hooks/use-toast';
 
 interface FileUploadManagerProps {
   files: any[];
-  setFiles: (files: any[]) => void;
+  setFiles: (files: any[] | ((prev: any[]) => any[])) => void;
   selectedFiles: string[];
   setSelectedFiles: (files: string[]) => void;
   onAction: (tool: string, action: string, data?: any) => void;
@@ -95,9 +95,9 @@ const FileUploadManager = ({
       
       // Simulate processing
       setTimeout(() => {
-      setFiles((prev: any[]) => prev.map(f => 
-        f.id === newFile.id ? { ...f, status: 'completed' } : f
-      ));
+        setFiles((prevFiles: any[]) => prevFiles.map(f => 
+          f.id === newFile.id ? { ...f, status: 'completed' } : f
+        ));
       }, 2000);
     }
 

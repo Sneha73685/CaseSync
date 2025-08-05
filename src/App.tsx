@@ -9,6 +9,9 @@ import Dashboard from "./pages/Dashboard";
 import Transcribe from "./pages/Transcribe";
 import FIRGeneration from "./pages/FIRGeneration";
 import FileManagement from "./pages/FileManagement";
+import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
+import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/transcribe" element={<Transcribe />} />
           <Route path="/fir" element={<FIRGeneration />} />
           <Route path="/files" element={<FileManagement />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/help" element={<Help />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

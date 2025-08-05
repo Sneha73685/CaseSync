@@ -1,7 +1,7 @@
 
 import React from 'react';
 import AppLayout from '@/components/layout/AppLayout';
-import FileManager from '@/components/files/FileManager';
+import EnhancedFileManager from '@/components/files/EnhancedFileManager';
 
 const FileManagement = () => {
   return (
